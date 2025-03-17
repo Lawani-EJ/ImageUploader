@@ -6,3 +6,5 @@
 - [x] use the `src\` directory
 - [x] use the AppRouter
 - [x] use the Turbopack for `next dev` 
+
+- [x] Install uploadthing
