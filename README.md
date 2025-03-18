@@ -8,3 +8,5 @@
 - [x] use the Turbopack for `next dev` 
 
 - [x] Install uploadthing
+- [x] Implement uploadthing
+- [] Fix Errors
