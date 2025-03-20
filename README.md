@@ -13,6 +13,7 @@ This project demonstrates how to upload files using **UploadThing** in a **Next.
 ## **UploadThing Implementation**  
 - ✅ Installed **UploadThing**  
 - ✅ Implemented **file upload functionality**  
+- ✅ Render the image succesfully on the webpage 
 
 ## **Challenges & Errors Faced**  
 
@@ -32,7 +33,7 @@ This project demonstrates how to upload files using **UploadThing** in a **Next.
    - After uploading, the file was not accessible.  
    - **Fix**: Used the correct `ufsUrl` returned from UploadThing to display the uploaded file.  
 
-## **Next Steps**  
+## **Next Steps** 
 - [ ] Improve UI to show upload progress  
 - [ ] Store uploaded file metadata in a database  
 - [ ] Implement authentication for restricted uploads  
