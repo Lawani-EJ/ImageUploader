@@ -1,6 +1,6 @@
 "use client";
 
-import { UploadButton } from "@/utils/uploadthing";
+import { UploadDropzone } from "@/utils/uploadthing";
 import { useState } from "react";
 import Image from 'next/image';
 
@@ -9,7 +9,7 @@ const ImageUpload = () => {
 
   return (
     <div>
-      <UploadButton endpoint='imageUploader'
+      <UploadDropzone endpoint='imageUploader'
       onClientUploadComplete={(res) => {
         // Do something with the response
         console.log("Files: ", res);
