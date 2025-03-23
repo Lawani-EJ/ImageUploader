@@ -16,7 +16,7 @@ This project demonstrates how to upload files using **UploadThing** in a **Next.
 - ✅ Render the image succesfully on the webpage 
 - ✅ Improve UI to show upload progress  
 
-## **Challenges & Errors Faced**  
+<!-- ## **Challenges & Errors Faced**  
 
 1. **500 Internal Server Error on Upload Request**  
    - Initially, `POST /api/uploadthing?actionType=upload&slug=imageUploader` was failing with a **500 error**.  
@@ -36,4 +36,4 @@ This project demonstrates how to upload files using **UploadThing** in a **Next.
 
 ## **Next Steps** 
 - [ ] Store uploaded file metadata in a database  
-- [ ] Implement authentication for restricted uploads  
+- [ ] Implement authentication for restricted uploads   -->

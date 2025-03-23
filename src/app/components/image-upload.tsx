@@ -9,7 +9,14 @@ const ImageUpload = () => {
 
   return (
     <div>
-      <UploadDropzone endpoint='imageUploader'
+      <UploadDropzone appearance={{
+        container:{
+          border: '1px dotted blue',
+        },
+        uploadIcon:{
+          color: 'blue',
+        },
+      }} endpoint='imageUploader'
       onClientUploadComplete={(res) => {
         // Do something with the response
         console.log("Files: ", res);
