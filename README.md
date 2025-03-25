@@ -1,39 +1,108 @@
-# **Uploading Files with UploadThing**  
+# UploadThing File Upload Project
 
-This project demonstrates how to upload files using **UploadThing** in a **Next.js** application with **TypeScript** and the **App Router**.  
+## Overview
+This project is a simple file upload implementation using **UploadThing**, **TypeScript**, and **Next.js**. It allows users to upload images with size restrictions and implements authentication middleware to ensure only authorized users can upload files.
 
-## **Project Setup**  
-- ✅ Created the initial setup with **Next.js**  
-- ✅ Used **TypeScript** for type safety  
-- ✅ Configured **ESLint** for linting  
-- ✅ Organized the project using the `src/` directory  
-- ✅ Implemented **App Router**  
-- ✅ Used **Turbopack** for `next dev`  
+## Tech Stack
+- **Next.js** 15.2.2
+- **React** 19.0.0
+- **TypeScript** 5
+- **UploadThing** 7.5.2
 
-## **UploadThing Implementation**  
-- ✅ Installed **UploadThing**  
-- ✅ Implemented **file upload functionality**  
-- ✅ Render the image succesfully on the webpage 
-- ✅ Improve UI to show upload progress  
+## Installation
+### Prerequisites
+Ensure you have **Node.js** and **npm** (or **pnpm/yarn**) installed.
 
-<!-- ## **Challenges & Errors Faced**  
+### Steps
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Lawani-EJ/ImageUploader
+   cd ImageUploader
+   ```
 
-1. **500 Internal Server Error on Upload Request**  
-   - Initially, `POST /api/uploadthing?actionType=upload&slug=imageUploader` was failing with a **500 error**.  
-   - **Fix**: Ensured `UPLOADTHING_SECRET` and `UPLOADTHING_APP_ID` were correctly loaded in `.env.local`.  
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+   or using **pnpm**:
+   ```sh
+   pnpm install
+   ```
 
-2. **Slow Compilation & Middleware Delays**  
-   - The server took a long time to start and compile routes (`121.8s for /api/uploadthing`).  
-   - **Fix**: Checked for **antivirus interference** and slow filesystem warnings.  
+3. Run the development server:
+   ```sh
+   npm run dev
+   ```
+   The app will be accessible at `http://localhost:3000`.
 
-3. **Presigned URL Generation Issue**  
-   - UploadThing was not returning a **presigned URL**, preventing uploads.  
-   - **Fix**: Verified that `imageUploader` was correctly defined in the `FileRouter`.  
+## Project Structure
+```
+📂 uploadthing-project
+├── 📂 app
+│   ├── 📂 components
+│   │   ├── image-upload.tsx
+│   ├── 📂 utils
+│   │   ├── uploadthing.ts
+│   ├── 📜 page.tsx
+│   ├── 📜 layout.tsx
+│   ├── 📜 globals.css
+├── 📂 uploadthing
+│   ├── 📜 core.ts
+│   ├── 📜 route.ts
+├── 📜 package.json
+├── 📜 tsconfig.json
+└── 📜 README.md
+```
 
-4. **File Not Showing After Upload**  
-   - After uploading, the file was not accessible.  
-   - **Fix**: Used the correct `ufsUrl` returned from UploadThing to display the uploaded file.  
+## Implementation Details
+### `core.ts`
+Defines the UploadThing file router with middleware for authentication and file upload constraints.
 
-## **Next Steps** 
-- [ ] Store uploaded file metadata in a database  
-- [ ] Implement authentication for restricted uploads   -->
+### `route.ts`
+Creates API route handlers using UploadThing’s `createRouteHandler()` function.
+
+### `image-upload.tsx`
+A React component that utilizes the `UploadButton` from UploadThing to provide a user-friendly upload interface.
+
+### `layout.tsx`
+Sets up global styles and includes UploadThing's styles.
+
+### `page.tsx`
+Renders the `ImageUpload` component within a styled page.
+
+## Usage
+- Click the **Upload** button to select an image.
+- The middleware ensures the user is authenticated before uploading.
+- Uploaded files are logged in the console with metadata.
+
+## Dependencies
+```json
+"dependencies": {
+  "@uploadthing/react": "^7.3.0",
+  "next": "15.2.2",
+  "react": "^19.0.0",
+  "react-dom": "^19.0.0",
+  "uploadthing": "^7.5.2"
+},
+"devDependencies": {
+  "@eslint/eslintrc": "^3",
+  "@types/node": "^20",
+  "@types/react": "^19",
+  "@types/react-dom": "^19",
+  "eslint": "^9",
+  "eslint-config-next": "15.2.2",
+  "typescript": "^5"
+}
+```
+
+## Future Enhancements
+- Add database storage for uploaded file metadata.
+- Improve UI feedback for uploads.
+- Implement role-based upload permissions.
+
+## Author
+[Your Name](https://github.com/Lawani-EJ)
+
+## License
+This project is licensed under the **MIT License**.
+
