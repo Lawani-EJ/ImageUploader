@@ -1,9 +1,24 @@
-# UploadThing File Upload Project
+# UploadThings With UploadThing File Upload
 
-## Overview
-This project is a simple file upload implementation using **UploadThing**, **TypeScript**, and **Next.js**. It allows users to upload images with size restrictions and implements authentication middleware to ensure only authorized users can upload files.
+<p align="center">
+    <a href="#" style="display: block;" align="center">
+        <img src="./public/among-us-upload.gif" alt="uploadthings" width="50%" />
+    </a>
+</p>
 
-## Tech Stack
+
+# Overview
+<p align="center">
+    <a href="#" style="display: block;" align="center">
+        <img src="./public/apple-icon.png" alt="uploadthings" width="10%" />
+    </a>
+</p>
+
+UploadThing is the easiest way to add file uploads to your full stack TypeScript application.
+This project is a simple file upload implementation using **UploadThing**, **TypeScript**, and **Next.js**. 
+It allows users to upload images with size restrictions.
+
+## Tech Stack I used 🧑🏿‍💻.
 - **Next.js** 15.2.2
 - **React** 19.0.0
 - **TypeScript** 5
@@ -94,14 +109,13 @@ Renders the `ImageUpload` component within a styled page.
   "typescript": "^5"
 }
 ```
-
-## Future Enhancements
-- Add database storage for uploaded file metadata.
-- Improve UI feedback for uploads.
-- Implement role-based upload permissions.
-
 ## Author
-[Your Name](https://github.com/Lawani-EJ)
+[Lawani-EJ](https://github.com/Lawani-EJ)
+
+# Special Thanks
+
+I would like to express my heartfelt gratitude to Cand Dev for the amazing tutorial on UploadThing. His guidance helped me understand and implement file uploads seamlessly in this project. Thank you for sharing your knowledge!
+
 
 ## License
 This project is licensed under the **MIT License**.
